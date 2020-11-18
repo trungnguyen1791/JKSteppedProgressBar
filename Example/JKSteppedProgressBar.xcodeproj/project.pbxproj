@@ -57,7 +57,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		B7760822DC581E7F95433F3E /* Pods-JKSteppedProgressBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKSteppedProgressBar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKSteppedProgressBar_Tests/Pods-JKSteppedProgressBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		CD044916B6DB12391E6620D1 /* JKSteppedProgressBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JKSteppedProgressBar.podspec; path = ../JKSteppedProgressBar.podspec; sourceTree = "<group>"; };
+		CD044916B6DB12391E6620D1 /* JKSteppedProgressBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JKSteppedProgressBar.podspec; path = ../JKSteppedProgressBar.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F240FC41BB27546D84C7686A /* Pods-JKSteppedProgressBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKSteppedProgressBar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKSteppedProgressBar_Example/Pods-JKSteppedProgressBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -536,6 +536,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JKSteppedProgressBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -553,6 +554,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = JKSteppedProgressBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

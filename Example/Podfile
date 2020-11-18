@@ -1,6 +1,6 @@
 use_frameworks!
 
-platform :ios, '8.3'
+platform :ios, '11.0'
 
 target 'JKSteppedProgressBar_Example' do
   pod 'JKSteppedProgressBar', :path => '../'

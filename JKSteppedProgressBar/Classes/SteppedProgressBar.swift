@@ -63,7 +63,7 @@ open class SteppedProgressBar: UIView {
         }
     }
     
-    @IBInspectable open var lineWidth: CGFloat = 2 {
+    @IBInspectable open var lineWidth: CGFloat = 6 {
         didSet {
             self.setNeedsDisplay()
         }
@@ -75,6 +75,9 @@ open class SteppedProgressBar: UIView {
             self.setNeedsDisplay()
         }
     }
+    
+    open var numberfontStyle: UIFont = UIFont.systemFont(ofSize: 13, weight: .light)
+    open var titlefontStyle: UIFont = UIFont.systemFont(ofSize: 13, weight: .light)
     
     // Changes the tint color of theactiveImages image to the activeColor
     @IBInspectable open  var tintActiveImage = false
@@ -272,7 +275,7 @@ open class SteppedProgressBar: UIView {
         //draw circle
         path.move(to: point)
         let circlePath = UIBezierPath(ovalIn: buttonRect)
-        
+        circlePath.lineWidth = 1.0
         #if swift(>=4.0)
         var attributes = [NSAttributedString.Key.foregroundColor : textColor, NSAttributedString.Key.paragraphStyle: paragraphStyle]
         #else
@@ -286,7 +289,7 @@ open class SteppedProgressBar: UIView {
             //draw index
             if stepDrawingMode == .drawIndex  {
                 let buttonTitle = "\(index + 1)"
-                let font = UIFont.boldSystemFont(ofSize: 14.0)
+                let font = numberfontStyle
                 #if swift(>=4.0)
                 attributes[NSAttributedString.Key.font] = font
                 #else
@@ -297,15 +300,16 @@ open class SteppedProgressBar: UIView {
             }
         }
         
-        path.append(circlePath)
+//        path.append(circlePath)
+        circlePath.stroke()
         
         var titleCenter = point
         titleCenter.y += circleRadius * 0.75 + titleOffset
         let title = titles[index]
         #if swift(>=4.0)
-        attributes[NSAttributedString.Key.font] = UIFont.boldSystemFont(ofSize: 12.0)
+        attributes[NSAttributedString.Key.font] = titlefontStyle
         #else
-            attributes[NSFontAttributeName] = UIFont.boldSystemFont(ofSize: 12.0)
+            attributes[NSFontAttributeName] = titlefontStyle
         #endif
         let attributedString = NSAttributedString(string: title, attributes: attributes)
         attributedString.draw(center: titleCenter)

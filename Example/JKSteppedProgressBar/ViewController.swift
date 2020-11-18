@@ -18,12 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var prevButton: UIButton!
     
     var inset: UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 30, right: 30)
+        return UIEdgeInsets(top: 10, left: 30 , bottom: 30, right: 30)
     }
     
     func configureTitleProgressBar() {
         progressbar.insets = inset
-        progressbar.titles = ["Step 1".localized, "Step 2".localized, "Step 3\nstep again".localized,]
+        progressbar.titles = ["Add picture".localized, "Add location".localized, "Add contact".localized,"Summary"]
     }
     
     // MARK: Misc
