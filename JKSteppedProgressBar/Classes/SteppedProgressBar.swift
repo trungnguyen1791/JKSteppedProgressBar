@@ -288,7 +288,13 @@ open class SteppedProgressBar: UIView {
         if index >= currentTab - (justCheckCompleted ? 1 : 0) || ( activeImages ?? [] ).count <= index {
             //draw index
             if stepDrawingMode == .drawIndex  {
-                let buttonTitle = "\(index + 1)"
+                var buttonTitle = "\(index + 1)"
+                if (i < currentTab - (justCheckCompleted ? 1 : 0)) {
+                    //passed
+                    buttonTitle = "✓"
+                } else {
+                    
+                }
                 let font = numberfontStyle
                 #if swift(>=4.0)
                 attributes[NSAttributedString.Key.font] = font
